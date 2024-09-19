@@ -66,6 +66,7 @@ def main():
     no_game_detected_count = 0
     game_start_time = None
     current_game = None
+    game_detected_sleep_duration = 60  # Sleep time in seconds after detecting a game
 
     while True:
         if not is_geforce_now_running():
@@ -80,6 +81,7 @@ def main():
                 game_start_time = time.time()  # Start timer when a new game is detected
             update_discord_presence(game_title, game_start_time)
             no_game_detected_count = 0  # Reset counter when a game is detected
+            time.sleep(game_detected_sleep_duration)  # Sleep for 60 seconds when game is detected
         else:
             if current_game:
                 current_game = None
