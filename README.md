@@ -1,6 +1,6 @@
 # GeForce Now Discord Rich Presence Script
 
-This script adds Discord Rich Presence for games played on GeForce Now. It detects the game you're playing and automatically updates your Discord status with the game title, time played, and a relevant game icon. The script also includes automatic time tracking and clears your status when no game is detected or when GeForce Now is closed.
+This script adds Discord Rich Presence for games played on GeForce Now desktop app. It detects the game you're playing and automatically updates your Discord status with the game title, time played, and a relevant game icon. The script also includes automatic time tracking and clears your status when no game is detected or when GeForce Now is closed.
 
 ## Features
 - **Discord Rich Presence Integration**: Automatically updates your Discord status when playing games on GeForce Now.
