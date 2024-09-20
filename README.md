@@ -33,7 +33,7 @@ Installation
 
     arduino
     ```bash
-    python setup.py`
+    python setup.py
     ```
     During setup:
 
