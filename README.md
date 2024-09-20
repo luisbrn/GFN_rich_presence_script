@@ -127,9 +127,13 @@ asset_map["New Game"] = "new_game_image"`
 Screenshots
 -----------
 ![image](https://github.com/user-attachments/assets/ff082a4d-f56d-49d2-a1ae-b7315bda3af7)
+
 ![image](https://github.com/user-attachments/assets/8458347e-5016-48eb-8b25-ff5b93ca4789)
+
 ![image](https://github.com/user-attachments/assets/f1bc5685-f33d-4363-a69d-d37519232caa)
+
 ![image](https://github.com/user-attachments/assets/46e5e5c3-afd5-4712-a379-544902688f9f)
+
 
 
 ### Discord Rich Presence Example
