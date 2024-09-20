@@ -20,11 +20,10 @@ Prerequisites
 
 -   Python 3.7+ installed on your system.
 -   Install the following required Python libraries:
-
+    ```bash
+    pip install pypresence psutil pygetwindow
+    ```
     
-
-    `pip install pypresence psutil pygetwindow`
-
 Installation
 ------------
 
