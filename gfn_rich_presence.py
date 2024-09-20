@@ -28,8 +28,8 @@ def initialize_presence(client_id):
         print(f"Failed to connect to Discord: {e}")
         sys.exit(1)
 
-def detect_geforce_now():
-    """Check if GeForce Now is running and identify the game from the window title."""
+def detect_game_window():
+    """Detect if a game window is currently active in GeForce Now."""
     for window in gw.getAllTitles():
         if "GeForce NOW" in window:
             game_title = window.split(" on GeForce NOW")[0]
@@ -66,16 +66,27 @@ def main():
 
     while True:
         if is_geforce_now_running():
-            game_title = detect_geforce_now()
-            if game_title and game_title != current_game:
-                current_game = game_title
-                game_start_time = time.time()  # Reset timer for new game
-                print(f"Detected game: {game_title}")
-            update_discord_presence(rpc, current_game, game_start_time)
+            game_title = detect_game_window()
+            
+            if game_title:
+                if game_title != current_game:
+                    current_game = game_title
+                    game_start_time = time.time()  # Reset timer for new game
+                    print(f"Detected game: {game_title}")
+                update_discord_presence(rpc, current_game, game_start_time)
+            else:
+                # If no game is detected but GeForce Now is still running, clear the status
+                if current_game:
+                    print("No game detected, clearing Discord status.")
+                    current_game = None
+                    game_start_time = None
+                    rpc.clear()
         else:
-            print("GeForce Now is not running. Exiting.")
-            rpc.clear()  # Clear Discord presence if GeForce Now is closed
+            # If GeForce Now is not running, clear Discord presence and exit
+            print("GeForce Now is not running. Clearing Discord presence and exiting.")
+            rpc.clear()
             sys.exit(0)  # Exit the script when GeForce Now is closed
+        
         time.sleep(10)  # Poll every 10 seconds
 
 if __name__ == "__main__":
