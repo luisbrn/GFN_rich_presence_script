@@ -33,11 +33,9 @@ Installation
 2.  **Run the Setup Script**: Open a terminal or command prompt, navigate to the repository folder, and run `setup.py` to configure your Discord Client ID and GeForce Now executable path:
 
     arduino
-
-    
-
-    `python setup.py`
-
+    ```bash
+    python setup.py`
+    ```
     During setup:
 
     -   Enter your Discord Client ID (you can create one via the Discord Developer Portal).
@@ -65,11 +63,8 @@ The script relies on two dictionaries in the `game_assets.py` file:
 
 #### Example `game_assets.py`:
 
-python
-
-
-
-`# game_assets.py
+```python
+# game_assets.py
 
 game_map = {
     "Halo Infinite": "Halo Infinite",
@@ -82,6 +77,7 @@ asset_map = {
     "Cyberpunk 2077": "cyberpunk_2077_image",
     "Far Cry 5": "far_cry_5_image"
 }`
+```
 
 You can edit this file to add or remove games as needed.
 
@@ -104,12 +100,10 @@ To show custom images for each game in Discord Rich Presence, follow these steps
 
     Example:
 
-    python
-
+    ```python
+    asset_map["Cyberpunk 2077"] = "cyberpunk_2077_image"
+    ```
     
-
-    `asset_map["Cyberpunk 2077"] = "cyberpunk_2077_image"`
-
 4.  **Save the Changes**:
 
     -   Once the images are uploaded and the `game_assets.py` file is updated, the images will appear in your Discord Rich Presence while playing GeForce Now.
@@ -126,15 +120,18 @@ To add support for more games:
 
 Example:
 
-python
-
-
-
-`game_map["New Game"] = "New Game"
+```python
+game_map["New Game"] = "New Game"
 asset_map["New Game"] = "new_game_image"`
+```
 
 Screenshots
 -----------
+![image](https://github.com/user-attachments/assets/ff082a4d-f56d-49d2-a1ae-b7315bda3af7)
+![image](https://github.com/user-attachments/assets/8458347e-5016-48eb-8b25-ff5b93ca4789)
+![image](https://github.com/user-attachments/assets/f1bc5685-f33d-4363-a69d-d37519232caa)
+![image](https://github.com/user-attachments/assets/46e5e5c3-afd5-4712-a379-544902688f9f)
+
 
 ### Discord Rich Presence Example
 
