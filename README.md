@@ -1,5 +1,6 @@
 GeForce Now Discord Rich Presence Script (v1.2.0)
 =================================================
+![a79c8754-a3dc-421d-bf21-9b9b9e10f435](https://github.com/user-attachments/assets/8bf4145a-947c-4e3e-bc56-9e3076a0d229)
 
 Overview
 --------
